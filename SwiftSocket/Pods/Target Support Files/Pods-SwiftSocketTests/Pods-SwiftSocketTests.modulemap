@@ -1,0 +1,6 @@
+framework module Pods_SwiftSocketTests {
+  umbrella header "Pods-SwiftSocketTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
