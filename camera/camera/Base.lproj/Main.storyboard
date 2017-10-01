@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="x97-IE-aBw">
+                                <rect key="frame" x="10" y="30" width="355" height="557"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGl-Io-b1q">
+                                <rect key="frame" x="10" y="597" width="172.5" height="60"/>
+                                <color key="backgroundColor" red="0.26790364579999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5ST-l2-uj2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="選擇照片">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="gotPic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QAC-WS-4hr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE4-MA-qih">
+                                <rect key="frame" x="192.5" y="597" width="172.5" height="60"/>
+                                <color key="backgroundColor" red="0.26790364579999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="THl-rO-aMt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="上傳">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnSendUpload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FAZ-cF-Vt5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9A-zu-u9y">
+                                <rect key="frame" x="10" y="30" width="355" height="557"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L0n-UU-Aiq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cE4-MA-qih" secondAttribute="bottom" constant="10" id="0uN-Tj-Xbv"/>
+                            <constraint firstItem="cE4-MA-qih" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="192.5" id="1C5-5v-n62"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wGl-Io-b1q" secondAttribute="trailing" constant="20" symbolic="YES" id="Fmd-zK-dml"/>
+                            <constraint firstItem="cE4-MA-qih" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.46" id="NTI-n4-OFD"/>
+                            <constraint firstItem="z9A-zu-u9y" firstAttribute="width" secondItem="x97-IE-aBw" secondAttribute="width" id="TZV-Hk-8ZR"/>
+                            <constraint firstItem="z9A-zu-u9y" firstAttribute="height" secondItem="x97-IE-aBw" secondAttribute="height" id="V6k-De-ODJ"/>
+                            <constraint firstItem="z9A-zu-u9y" firstAttribute="centerX" secondItem="x97-IE-aBw" secondAttribute="centerX" id="XLm-Dj-U0Z"/>
+                            <constraint firstItem="wGl-Io-b1q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.46" id="hsd-lz-RHB"/>
+                            <constraint firstItem="x97-IE-aBw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iRC-VZ-cwD"/>
+                            <constraint firstItem="cE4-MA-qih" firstAttribute="top" secondItem="x97-IE-aBw" secondAttribute="bottom" constant="10" id="jh8-5X-v44"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cE4-MA-qih" secondAttribute="trailing" id="qRZ-PY-4b9"/>
+                            <constraint firstItem="wGl-Io-b1q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="r8Q-PO-6gq"/>
+                            <constraint firstItem="z9A-zu-u9y" firstAttribute="centerY" secondItem="x97-IE-aBw" secondAttribute="centerY" id="tNU-J1-uq8"/>
+                            <constraint firstItem="x97-IE-aBw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="uiD-Nm-nTY"/>
+                            <constraint firstItem="x97-IE-aBw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="vxc-6O-EYa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wGl-Io-b1q" secondAttribute="bottom" constant="10" id="z96-rx-iMf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgPicture" destination="x97-IE-aBw" id="orB-f3-NQQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="200" height="200"/>
+    </resources>
+</document>
